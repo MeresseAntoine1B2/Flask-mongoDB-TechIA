@@ -1,0 +1,19 @@
+{% extends "base.html" %}
+
+{% block body %}
+<h1>Page Administrateur</h1>
+<p> Pour créer un article, veuillez completer les champs ci-dessous </p>
+<form action="" method="post">
+    <div class="form-group">
+        {{ form.titre.label }} <br>
+        {{ form.titre }} <br>
+        {{ form.résumé.label }} <br>
+        {{ form.résumé }} <br>
+        {{ form.texte.label }} <br>
+        {{ form.texte() }} </p>
+    </div> <br> <br>
+    {{ form.submit }}
+    {{ form.csrf_token }}
+
+</form>
+{% endblock %}

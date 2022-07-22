@@ -8,7 +8,14 @@
     <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
     <title>Mon super blog sur l'IA !</title>
 </head>
-<body>
+<nav>
+    <h1>Mon Super Blog sur l'IA !</h1>
+    <a href="{{ url_for('accueil') }}">Accueil du Blog</a>
+    <a href="{{ url_for('login') }}">Se connecter</a>
+    <a href="{{ url_for('register') }}">Créer un compte</a>
+</nav>
+<body id="top">
     {% block body %}{% endblock %}
+    <a id="btn-top" href="#top">^</a>
 </body>
 </html>

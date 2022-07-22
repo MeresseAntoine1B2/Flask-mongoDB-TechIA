@@ -1,5 +1,23 @@
 {% extends "base.html" %}
 
 {% block body %}
-    <h1>{{ nom }}</h1>
+    
+    <h1>{{ article["titre"] }}</h1>
+    <p>{{ article["texte"] }}</p>
+    <p>{{ article["date"] }}</p>
+    <ul>
+        {% for commentaire in article["commentaires"] %}
+            <li>{{ commentaire }}</li>
+        {% endfor %}
+    </ul>
+
+    <form action="" method="post">
+        <div>
+            {{ form.commentaire.label }} <br>
+            {{ form.commentaire }} <br>
+            
+        </div> 
+            {{ form.submit() }}
+            {{ form.csrf_token }}
+    </form>
 {% endblock %}

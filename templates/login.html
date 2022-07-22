@@ -1,0 +1,16 @@
+{% extends "base.html" %}
+
+{% block body %}
+<h1>Se connecter</h1>
+<p>Veuillez renseigner vos identifiants</p>
+<form action="" method="post">
+    <div class="form-group">
+        {{ form.username.label }} <br>
+        {{ form.username() }} <br>
+        {{ form.password.label }} <br>
+        {{ form.password() }} <br>
+    </div> <br> <br>
+        {{ form.submit() }}
+        {{ form.csrf_token }}
+    </form>
+{% endblock %}

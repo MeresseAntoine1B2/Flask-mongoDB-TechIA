@@ -1,7 +1,13 @@
 {% extends "base.html" %}
 
 {% block body %}
-    <!--
-        Compléter le code ici !
-    -->
+    {% for article in articles %}
+
+        <h1><a href="{{ url_for('article', titre = article['titre']) }}">{{ article["titre"] }}</a></h1>
+        <p>{{ article["résumé"] }}</p>
+        <p>{{ article["date"] }}</p>
+
+
+    
+    {% endfor %}
 {% endblock %}
